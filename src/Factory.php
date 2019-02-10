@@ -11,7 +11,7 @@ class Factory
 
     public function __construct(array $jokes = null)
     {
-        if (! is_null($jokes) && !empty($jokes)) {
+        if (!is_null($jokes) && !empty($jokes)) {
             $this->jokes = $jokes;
         }
     }
