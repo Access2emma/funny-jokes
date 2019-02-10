@@ -8,13 +8,13 @@ class UserTest extends TestCase
     /** @test */
     public function it_set_change_and_get_firstname()
     {
-        $user = new User("Emmanuel");
+        $user = new User('Emmanuel');
 
         $firstname = $user->getFirstName();
 
         $this->assertEquals($firstname, 'Emmanuel');
 
-        $user->setFirstName("Doe");
+        $user->setFirstName('Doe');
 
         $firstname = $user->getFirstName();
 
@@ -24,13 +24,13 @@ class UserTest extends TestCase
     /** @test */
     public function set_get_and_change_lastname()
     {
-        $user = new User("", 'Adeniyi');
+        $user = new User('', 'Adeniyi');
 
         $lastname = $user->getLastName();
 
         $this->assertEquals($lastname, 'Adeniyi');
 
-        $user->setLastName("John");
+        $user->setLastName('John');
 
         $lastname = $user->getLastName();
 
@@ -40,14 +40,14 @@ class UserTest extends TestCase
     /** @test */
     public function it_get_user_fullname()
     {
-        $user = new User("Obagunwa", 'Adeniyi');
+        $user = new User('Obagunwa', 'Adeniyi');
 
         $fullname = $user->getFullName();
 
         $this->assertEquals($fullname, 'Obagunwa Adeniyi');
 
-        $user->setFirstName("Doe");
-        $user->setLastName("John");
+        $user->setFirstName('Doe');
+        $user->setLastName('John');
 
         $fullname = $user->getFullName();
 
@@ -57,14 +57,14 @@ class UserTest extends TestCase
     /** @test */
     public function names_get_trimmed()
     {
-        $user = new User("   Obagunwa  ", '   Adeniyi');
+        $user = new User('   Obagunwa  ', '   Adeniyi');
 
         $fullname = $user->getFullName();
 
         $this->assertEquals($fullname, 'Obagunwa Adeniyi');
 
-        $user->setFirstName("Doe");
-        $user->setLastName("John");
+        $user->setFirstName('Doe');
+        $user->setLastName('John');
 
         $fullname = $user->getFullName();
 
@@ -82,12 +82,11 @@ class UserTest extends TestCase
         $this->assertEquals($user->getEmail(), $email);
     }
 
-    
     /** @test */
     public function email_variable_provide_valid_information()
     {
         $email = 'emmanuel@test.com';
-        $user = new User("   Obagunwa  ", '   Adeniyi');
+        $user = new User('   Obagunwa  ', '   Adeniyi');
         $user->setEmail($email);
 
         $emailVariable = $user->emailVariable();

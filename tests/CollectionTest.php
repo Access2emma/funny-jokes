@@ -8,7 +8,7 @@ class CollectionTest extends TestCase
     /** @test */
     public function empty_initiated_collection_return_empty_value()
     {
-        $collection = new Collection;
+        $collection = new Collection();
 
         $this->assertEmpty($collection->get());
     }
@@ -35,7 +35,7 @@ class CollectionTest extends TestCase
     /** @test */
     public function collection_is_an_instance_of_iterator_aggrate()
     {
-        $collection = new Collection;
+        $collection = new Collection();
 
         $this->assertInstanceOf(IteratorAggregate::class, $collection);
     }

@@ -34,26 +34,31 @@ class User
         return $this->email;
     }
 
-    public function setFirstName(string $name){
+    public function setFirstName(string $name)
+    {
         $this->firstname = trim($name);
     }
 
-    public function setLastName(string $name){
+    public function setLastName(string $name)
+    {
         $this->lastname = trim($name);
     }
 
-    public function setEmail(string $email){
+    public function setEmail(string $email)
+    {
         $this->email = trim($email);
     }
 
-    public function getFullName(){
+    public function getFullName()
+    {
         return "{$this->firstname} {$this->lastname}";
     }
 
-    public function emailVariable(){
+    public function emailVariable()
+    {
         return [
-            'name' => $this->getFullName(),
-            'email' => $this->getEmail()
+            'name'  => $this->getFullName(),
+            'email' => $this->getEmail(),
         ];
     }
 }
