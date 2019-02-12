@@ -55,7 +55,8 @@ class CollectionTest extends TestCase
     }
 
     /** @test */
-    public function collection_can_be_merge_with_another_collection(){
+    public function collection_can_be_merge_with_another_collection()
+    {
         $collection1 = new Collection(['Monday', 'Tuesday']);
         $collection2 = new Collection(['Wednesday', 'Thursday', 'Friday']);
 
@@ -65,7 +66,8 @@ class CollectionTest extends TestCase
     }
 
     /** @test */
-    public function items_can_be_added_to_collection(){
+    public function items_can_be_added_to_collection()
+    {
         $collection = new Collection(['Monday', 'Tuesday']);
 
         $this->assertCount(2, $collection->get());
