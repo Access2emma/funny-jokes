@@ -53,4 +53,25 @@ class CollectionTest extends TestCase
 
         $this->assertCount(3, $items);
     }
+
+    /** @test */
+    public function collection_can_be_merge_with_another_collection(){
+        $collection1 = new Collection(['Monday', 'Tuesday']);
+        $collection2 = new Collection(['Wednesday', 'Thursday', 'Friday']);
+
+        $collection1->merge($collection2);
+
+        $this->assertCount(5, $collection1->get());
+    }
+
+    /** @test */
+    public function items_can_be_added_to_collection(){
+        $collection = new Collection(['Monday', 'Tuesday']);
+
+        $this->assertCount(2, $collection->get());
+
+        $collection->add(['Wednessday', 'Thursday']);
+
+        $this->assertCount(4, $collection->get());
+    }
 }
